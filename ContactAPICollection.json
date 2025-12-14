@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "cb854881-c3e1-4c26-b16c-71c29c3d29f3",
+		"name": "ContactAPI_EnvPractice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47953956"
+	},
+	"item": [
+		{
+			"name": "Login User-GetToken Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"{{username}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/users/login",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDg3MWE2NmY2ZDEzYzAwMTM3Y2IzMWEiLCJpYXQiOjE3NTkzODQ4MDV9.vpN27z3fkf1MUHGnCl91oQn4V1Gdrjig1N8qBngu0HA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/users/logout",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Contact Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDg3MWE2NmY2ZDEzYzAwMTM3Y2IzMWEiLCJpYXQiOjE3NTkxOTczNTR9.ZoA6DqSiNewZYmKTXMUII8ejDnMoNuDU8jRWmr0ozz0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"firstName\": \"RooContact\",\r\n    \"lastName\": \"Api\",\r\n    \"birthdate\": \"1999-09-12\",\r\n    \"email\": \"testcontactapi@gmail.com\",\r\n    \"phone\": \"3467289289\",\r\n    \"street1\": \"BTM Layout\",\r\n    \"street2\": \"stage 2\",\r\n    \"city\": \"Bengaluru\",\r\n    \"stateProvince\": \"karnataka\",\r\n    \"postalCode\": \"560087\",\r\n    \"country\": \"India\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/contacts",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETAllContacts Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDg3MWE2NmY2ZDEzYzAwMTM3Y2IzMWEiLCJpYXQiOjE3NTkzODQ4MDV9.vpN27z3fkf1MUHGnCl91oQn4V1Gdrjig1N8qBngu0HA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/contacts",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a User By id Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDg3MWE2NmY2ZDEzYzAwMTM3Y2IzMWEiLCJpYXQiOjE3NTkxOTczNTR9.ZoA6DqSiNewZYmKTXMUII8ejDnMoNuDU8jRWmr0ozz0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/contacts/68db45e5c294240015a0ec1d",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"contacts",
+						"68db45e5c294240015a0ec1d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Contact Copy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDg3MWE2NmY2ZDEzYzAwMTM3Y2IzMWEiLCJpYXQiOjE3NTkxOTczNTR9.ZoA6DqSiNewZYmKTXMUII8ejDnMoNuDU8jRWmr0ozz0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"RooContact\",\r\n    \"lastName\": \"Api\",\r\n    \"birthdate\": \"1999-09-12\",\r\n    \"email\": \"roocontactapi@gmail.com\",\r\n    \"phone\": \"3467289289\",\r\n    \"street1\": \"BTM Layout\",\r\n    \"street2\": \"stage 2\",\r\n    \"city\": \"Bengaluru\",\r\n    \"stateProvince\": \"karnataka\",\r\n    \"postalCode\": \"560087\",\r\n    \"country\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/contacts/68db4311c294240015a0ebdc",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"contacts",
+						"68db4311c294240015a0ebdc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Contact Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDg3MWE2NmY2ZDEzYzAwMTM3Y2IzMWEiLCJpYXQiOjE3NTkxOTczNTR9.ZoA6DqSiNewZYmKTXMUII8ejDnMoNuDU8jRWmr0ozz0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://thinking-tester-contact-list.herokuapp.com/contacts/68db45e5c294240015a0ec1d",
+					"protocol": "https",
+					"host": [
+						"thinking-tester-contact-list",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"contacts",
+						"68db45e5c294240015a0ec1d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

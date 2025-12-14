@@ -1,0 +1,27 @@
+{
+	"id": "ca28a733-66c9-43d4-9975-a11fcfb3aa9e",
+	"name": "ContactEnv",
+	"values": [
+		{
+			"key": "baseURL",
+			"value": "https://thinking-tester-contact-list.herokuapp.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "email",
+			"value": "naveenanimation20@gmail.com",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "password",
+			"value": "test@123",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-12-14T16:35:39.874Z",
+	"_postman_exported_using": "Postman/10.24.27"
+}
